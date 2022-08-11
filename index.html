@@ -9,59 +9,89 @@
   </head>
   <body>
     <!-- Elementos do Formulario -->
-    <form id="set_form">
-      <div>
+    <div class="center_div" id="set_form">
+      <div class="inputDiv">
         <label class="set_label">Conjunto 1</label>
         <input id="set01" type="number" />
-        <input id="input_button_01" type="button" value="+" />
+        <button id="input_button_01" type="button">+</button>
       </div>
-      <div>
+      <div class="inputDiv">
         <label class="set_label">Conjunto 2</label>
         <input id="set02" type="number" />
-        <input id="input_button_02" type="button" value="+" />
+        <button id="input_button_02" type="button">+</button>
       </div>
-      <div>
+      <div class="inputDiv">
         <label class="set_label">Conjunto 3</label>
         <input id="set03" type="number" />
-        <input id="input_button_03" type="button" value="+" />
-      </div>
-    </form>
-
-    <!-- Disposição dos elementos de cada conjunto -->
-    <div class="set_display">
-      <div class="set">
-        <div class="set_div" id="set01_numbers"></div>
-        <h5>Conjunto A</h5>
-      </div>
-      <div class="set">
-        <div class="set_div" id="set02_numbers"></div>
-        <h5>Conjunto B</h5>
-      </div>
-      <div class="set">
-        <div class="set_div" id="set03_numbers"></div>
-        <h5>Conjunto C</h5>
+        <button id="input_button_03" type="button">+</button>
       </div>
     </div>
 
-    <div class="btn_confirm_div">
-      <button id="btn_show_results">Confirmar</button>
+    <!-- Disposição dos elementos de cada conjunto -->
+
+    <div class="center_div">
+      <div class="set_display">
+        <div class="set">
+          <div class="set_div" id="set01_numbers"></div>
+          <h5>Conjunto A</h5>
+        </div>
+        <div class="set">
+          <div class="set_div" id="set02_numbers"></div>
+          <h5>Conjunto B</h5>
+        </div>
+        <div class="set">
+          <div class="set_div" id="set03_numbers"></div>
+          <h5>Conjunto C</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="center_div">
+      <button class="defaultBtn" id="btn_show_results">Confirmar</button>
     </div>
 
     <!-- Mostrar resultados -->
     <div class="div_results">
       <div class="sets_list">
-        <div id="setA"></div>
-        <div id="setB"></div>
-        <div id="setC"></div>
-        <div id="aubuc"></div>
-        <div id="intersectionABC"></div>
-        <div id="intersectionAB"></div>
-        <div id="intersectionAC"></div>
-        <div id="intersectionBC"></div>
+        <div>
+          <span class="categories">Conjunto A: </span>
+          <span id="setA"></span>
+        </div>
+        <div>
+          <span class="categories">Conjunto B: </span>
+          <span id="setB"></span>
+        </div>
+        <div>
+          <span class="categories">Conjunto C: </span>
+          <span id="setC"></span>
+        </div>
+        <div>
+          <span class="categories">AUBUC: </span>
+          <span id="aubuc"></span>
+        </div>
+        <div>
+          <span class="categories">A∩B∩C: </span>
+          <span id="intersectionABC"></span>
+        </div>
+        <div>
+          <span class="categories">A∩B: </span>
+          <span id="intersectionAB"></span>
+        </div>
+        <div>
+          <span class="categories">A∩C: </span>
+          <span id="intersectionAC"></span>
+        </div>
+        <div>
+          <span class="categories">B∩C: </span>
+          <span id="intersectionBC"></span>
+        </div>
         <!-- <div id="intersectionOnlyAB"></div>
         <div id="intersectionOnlyAC"></div>
         <div id="intersectionOnlyBC"></div> -->
       </div>
+    </div>
+    <div class="center_div">
+      <button class="defaultBtn">Reset</button>
     </div>
     <script type="module" src="./resource/script.js"></script>
   </body>

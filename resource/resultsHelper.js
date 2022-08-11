@@ -14,27 +14,27 @@ const onlyAC = document.getElementById("intersectionOnlyAC");
 const onlyBC = document.getElementById("intersectionOnlyBC");
 
 export default function writeResults() {
-  setA.innerText = `Conjunto A: { ${setList[0].numList.join(", ")} }`;
-  setB.innerText = `Conjunto B: { ${setList[1].numList.join(", ")} }`;
-  setC.innerText = `Conjunto C: { ${setList[2].numList.join(", ")} }`;
+  setA.innerText = `{ ${setList[0].numList.join(", ")} }`;
+  setB.innerText = `{ ${setList[1].numList.join(", ")} }`;
+  setC.innerText = `{ ${setList[2].numList.join(", ")} }`;
 
-  aUbUc.innerText = `AUBUC: { ${[...new Set(calcSets(setList).allSets)].join(
-    `, `
+  aUbUc.innerText = `{ ${[...new Set(calcSets(setList).allSets)].join(`, `)} }`;
+
+  intersectionAll.innerText = `{ ${calcSets(setList).intersectionABC.join(
+    ", "
   )} }`;
 
-  intersectionAll.innerText = `A∩B∩C: { ${calcSets(
-    setList
-  ).intersectionABC.join(", ")} }`;
+  intersectionAB.innerText = `{ ${calcSets(setList).intersectionTotalAB.join(
+    ", "
+  )} }`;
 
-  intersectionAB.innerText = `A∩B: { ${calcSets(
-    setList
-  ).intersectionOnlyAB.join(", ")} }`;
+  intersectionAC.innerText = `{ ${calcSets(setList).intersectionTotalAC.join(
+    ", "
+  )} }`;
 
-  intersectionAC.innerText = `A∩C: { ${calcSets(
-    setList
-  ).intersectionOnlyAC.join(", ")} }`;
+  intersectionBC.innerText = `{ ${calcSets(setList).intersectionTotalBC.join(
+    ", "
+  )} }`;
 
-  intersectionBC.innerText = `B∩C: { ${calcSets(
-    setList
-  ).intersectionOnlyBC.join(", ")} }`;
+  console.log(calcSets(setList));
 }
