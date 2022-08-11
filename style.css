@@ -38,7 +38,7 @@ h5 {
 .sets_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 50%;
+  width: 100%;
 }
 
 .sets_list > div {
@@ -62,4 +62,7 @@ h5 {
   margin: 15px;
   padding: 5px;
   border: 1px solid greenyellow;
+}
+
+@media (max-width: 480px) {
 }

@@ -18,7 +18,7 @@ export default function writeResults() {
   setB.innerText = `{ ${setList[1].numList.join(", ")} }`;
   setC.innerText = `{ ${setList[2].numList.join(", ")} }`;
 
-  aUbUc.innerText = `{ ${[...new Set(calcSets(setList).allSets)].join(`, `)} }`;
+  aUbUc.innerText = `{ ${calcSets(setList).aUbUc.join(`, `)} }`;
 
   intersectionAll.innerText = `{ ${calcSets(setList).intersectionABC.join(
     ", "
@@ -35,6 +35,4 @@ export default function writeResults() {
   intersectionBC.innerText = `{ ${calcSets(setList).intersectionTotalBC.join(
     ", "
   )} }`;
-
-  console.log(calcSets(setList));
 }
