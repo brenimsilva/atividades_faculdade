@@ -21,6 +21,7 @@ h5 {
   border: 1px solid black;
   margin-top: 50px;
   padding: 20px;
+  overflow: scroll;
 }
 
 #btn_show_results {
@@ -29,4 +30,13 @@ h5 {
 .btn_confirm_div {
   display: flex;
   justify-content: center;
+}
+
+.sets_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sets_list > div {
+  margin: 10px;
 }
