@@ -17,3 +17,9 @@
 h5 {
   text-align: center;
 }
+
+.div_results {
+  border: 1px solid black;
+  margin-top: 50px;
+  padding: 20px;
+}
