@@ -18,5 +18,5 @@ const set03 = {
   box: document.getElementById("set03_numbers"),
   numList: [],
 };
-
-export const setList = [set01, set02, set03];
+const setList = [set01, set02, set03];
+export default setList;
