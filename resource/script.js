@@ -1,8 +1,8 @@
 import setList from "./sets.js";
-import calcSets from "./setsCalc.js";
 import writeResults from "./resultsHelper.js";
 
 const btnConfirm = document.getElementById("btn_show_results");
+const btnReset = document.querySelector(".btn_reset");
 
 setList.forEach((set) => {
   set.inputBtn.addEventListener("click", (e) => {
@@ -20,4 +20,9 @@ setList.forEach((set) => {
 btnConfirm.addEventListener("click", (e) => {
   e.preventDefault();
   writeResults();
+});
+
+btnReset.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.location.reload();
 });
